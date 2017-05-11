@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Delete Elements</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> </head>
+
+<body>
+    <div class="container">
+        <input type="button" value="+" onclick="addRow()">
+        <div id="content"> </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script type="text/javascript">
+        //Add Delete Insert
+        function addRow() {
+            var div = document.createElement('div');
+            div.className = 'row';
+            div.innerHTML = '<input type="text" name="name" value="" />\
+        <input type="text" name="value" value="" />\
+        <label> <input type="checkbox" name="check" value="1" /> Checked? </label>\
+        <input type="button" value="-" onclick="removeRow(this)">';
+            document.getElementById('content').appendChild(div);
+        }
+
+        function removeRow(input) {
+            document.getElementById('content').removeChild(input.parentNode);
+        }
+    </script>
+</body>
+
+</html>
