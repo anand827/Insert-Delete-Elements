@@ -9,7 +9,7 @@
 
 <body>
     <div class="container">
-        <input type="button" value="+" onclick="addRow()">
+        <input type="button" value="Add" onclick="addRow()">
         <div id="content"> </div>
     </div>
     <script src="jquery.js"></script>
@@ -21,7 +21,7 @@
             div.innerHTML = '<input type="text" name="name" value="" />\
         <input type="text" name="value" value="" />\
         <label> <input type="checkbox" name="check" value="1" /> Checked? </label>\
-        <input type="button" value="-" onclick="removeRow(this)">';
+        <input type="button" value="Remove" onclick="removeRow(this)">';
             document.getElementById('content').appendChild(div);
         }
 
